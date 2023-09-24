@@ -15,4 +15,30 @@ Memberikan dasar yang kuat bagi manajemen Transjakarta untuk mengambil keputusan
 5.	Perencanaan Anggaran yang Lebih Tepat
 Tujuan ini adalah memberikan alat yang lebih akurat bagi pihak berwenang untuk merencanakan anggaran operasional dengan memproyeksikan jumlah pendapatan dari penumpang. Ini akan membantu dalam alokasi anggaran yang efisien. Contohnya, dengan menggunakan prediksi jumlah pembayaran. Transjakarta dapat memperkirakan pendapatan yang akan mereka terima dari penumpang dalam bulan tertentu. Dengan pemahaman yang lebih baik tentang potensi pendapatan ini, mereka dapat mengalokasikan anggaran mereka secara lebih cerdas, misalnya, untuk pemeliharaan armada atau perbaikan infrastruktur, sehingga mengoptimalkan penggunaan sumber daya finansial.
 Dengan mencapai tujuan-tujuan ini, proyek ini berkontribusi pada upaya meningkatkan efisiensi dan kualitas layanan transportasi publik, mengurangi kemacetan, dan membuat pengalaman perjalanan penumpang lebih baik di Jakarta.
+# Dataset
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/64af5a4b-d7b1-47da-a319-4aa2913b0a55)
+Dataset laporan proyek capstone ini diambil dari sumber Kaggle, https://www.kaggle.com/datasets/dikisahkan/transjakarta-transportation-transaction.
+Dengan atribut-atribut berikut:
+1.	transID: Nomor identifikasi transaksi.
+2.	payCardID: ID kartu pembayaran yang digunakan dalam transaksi.
+3.	payCardBank: Nama bank yang terkait dengan kartu pembayaran.
+4.	payCardName: Nama pemilik kartu pembayaran.
+5.	payCardSex: Jenis kelamin pemilik kartu pembayaran.
+6.	payCardBirthDate: Tanggal lahir pemilik kartu pembayaran.
+7.	corridorID: ID koridor tempat transaksi ini terjadi.
+8.	corridorName: Nama koridor tempat transaksi ini terjadi.
+9.	direction: Arah perjalanan dalam transaksi.
+10.	tapInStops: Jumlah tap-in stops yang terjadi dalam perjalanan.
+11.	tapInStopsName: Nama-nama tap-in stops.
+12.	tapInStopsLat: Koordinat lintang tap-in stops.
+13.	tapInStopsLon: Koordinat bujur tap-in stops.
+14.	stopStartseq: Urutan mulai berhenti dalam perjalanan.
+15.	tapInTime: Waktu tap-in dalam transaksi.
+16.	tapOutStops: Jumlah tap-out stops yang terjadi dalam perjalanan.
+17.	tapOutStopsName: Nama-nama tap-out stops.
+18.	tapOutStopsLat: Koordinat lintang tap-out stops.
+19.	tapOutStopLon: Koordinat bujur tap-out stops.
+20.	stopEndSeq: Urutan berhenti berakhir dalam perjalanan.
+21.	tapOutTime: Waktu tap-out dalam transaksi.
+22.	payAmount: Jumlah uang yang dibayarkan dalam transaksi.
 
