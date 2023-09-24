@@ -41,4 +41,169 @@ Dengan atribut-atribut berikut:
 20.	stopEndSeq: Urutan berhenti berakhir dalam perjalanan.
 21.	tapOutTime: Waktu tap-out dalam transaksi.
 22.	payAmount: Jumlah uang yang dibayarkan dalam transaksi.
+# Flowchart
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/773e5452-3780-45ad-a940-a885f840f798)
+1.	Pengguna mengirimkan eksperimen AutoAI dengan pengaturan bawaan.
+2.	Beberapa model pipa dibuat. Salah satu model pipa pilihan dari peringkat teratas disimpan sebagai Jupyter Notebook.
+3.	Jupyter Notebook tersebut dieksekusi.
+# Komponen
+1.	IBM Watson Studio - IBM Watson® Studio membantu ilmuwan dan analis data mempersiapkan data dan membangun model dalam skala besar di semua cloud.
+2.	IBM Watson Machine Learning - IBM Watson® Machine Learning membantu ilmuwan dan pengembang data mempercepat penerapan AI dan pembelajaran mesin,
+3.	IBM Cloud Object Storage - IBM Cloud™ Object Storage memungkinkan penyimpanan data dalam jumlah praktis tanpa batas, secara sederhana dan hemat biaya.
+# Langkah-langkah Pengerjaan Project Capstone Prediksi Jumlah Pembayaran Penumpang Transjakarta Menggunakan Model Regresi pada Data Transaksi Transportasi Publik
+1. Mencari dataset tentang topik yang akan saya bahas yaitu dataset transaksi angkutan umum transjakarta dari kaggle https://www.kaggle.com/datasets/dikisahkan/transjakarta-transportation-transaction
+
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/8c45f647-4342-4596-8231-6ef363649b46)
+2.	Login ke dalam ibm cloud
+ ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/c8ce5f42-fedd-4708-9030-bfca557f2338)
+
+
+3.	Setelah berhasil login maka akan muncul tampilan dashboard ibm cloud
+ 
+
+
+
+
+
+
+
+
+
+4.	Lalu pada menu search saya mencari service watsonx
+ 
+
+5.	Lalu saya memilih watson.ai
+ 
+
+
+
+
+
+
+
+
+
+6.	Setelah itu saya memilih build machine learning models automatically with auto ai  
+ 
+
+7.	Lalu memilih asset dan membuat new task
+ 
+
+
+
+
+
+
+
+
+8.	Lalu memilih kembali build machine learning models automatically with autoai
+ 
+
+9.	Lalu saya membuat nama untuk eksperimen yang akan dilakukan. Setelah konfigurasinya telah terkonfirmasi maka kemudian di create.
+ 
+
+
+
+
+
+
+
+10.	Unggah file dataset dalam format CSV.
+ 
+
+11.	Pada konfigurasi detail, pilih opsi "No" untuk analisis time series.
+ 
+
+
+
+
+
+
+
+
+
+12.	Tentukan kolom yang akan dijadikan target prediksi, yaitu kolom "payAmount." Lalu atur pengaturan eksperimen lainnya.
+ 
+
+13.	Pilih model regresi, karena dapat memodelkan hubungan antara fitur-fitur lain dalam dataset dengan variabel target numerik yaitu "payAmount."
+ 
+
+
+
+
+
+
+
+14.	Pilih algoritma "Algorithm" dan "Gradient Classifier."
+ 
+
+15.	Pilih algoritma ketiga, simpan pengaturan, dan jalankan eksperimen.
+ 
+ 
+
+16.	Sedang memproses dan terdapat RMSE (Root Mean Square Error): ukuran seberapa jauh perkiraan dari nilai sebenarnya. Cross validation score: ukuran seberapa akurat perkiraan pada data yang tidak digunakan untuk melatih model.
+
+  
+
+17.	Terdapat Pipeline yaitu serangkaian langkah yang digunakan untuk memproses data sebelum digunakan untuk melatih model pembelajaran mesin. Dalam kasus ini, pipeline terdiri dari dua langkah, yaitu: Feature transformers digunakan untuk mengubah data menjadi format yang dapat digunakan oleh model pembelajaran mesin. Model adalah algoritma pembelajaran mesin yang digunakan untuk memprediksi jumlah penumpang Transjakarta.
+
+  
+
+18.	Pipeline peringkat tertinggi dan memiliki RMSE terendah adalah Pipeline 4
+ 
+
+
+
+
+
+
+
+
+
+
+19.	Model dengan peringkat tertinggi adalah model "Pipeline 4". Model ini memiliki RMSE (Optimized) terendah, yaitu 264.358. Model ini juga memiliki R squared tertinggi, yaitu 0.997.
+ 
+
+20.	Fitur "corridorName" memiliki feature importance tertinggi, yaitu 100% Hal ini berarti bahwa fitur "corridorName" adalah fitur yang paling penting dalam memprediksi payAmount.
+ 
+
+
+
+
+
+
+21.	Selanjutnya Create a new deployment space, masukkan nama, dan kaitkan dengan machine learning service kemudian pilih Create
+ 
+
+22.	Download CSV templetenya terlebih dahulu.
+ 
+
+
+
+
+
+
+
+
+
+23.	Setelah memasukan data pada CSV templete yang sudah di download, maka upload kembali, lalu pilih predict.
+ 
+
+24.	Maka hasil predict akan terlihat. Hasil nilai prediksi untuk baris pertama adalah 3697.2, sedangkan nilai sebenarnya adalah 3500. Selisih antara nilai prediksi dan nilai sebenarnya adalah 197.2. Selisih ini cukup kecil, sehingga menunjukkan bahwa model regresi memiliki akurasi yang cukup baik.
+
+ 
+
+
+
+II.2  Hasil project capstone
+Berdasarkan hasil prediksi Prediksi Jumlah Pembayaran Penumpang Transjakarta Menggunakan Model Regresi pada Data Transaksi Transportasi Publik:
+1.	Peringkat tertinggi adalah pipeline 4. Model ini memiliki RMSE (Optimized) terendah, yaitu 264.358. Model ini juga memiliki R squared tertinggi, yaitu 0.997.
+2.	Algoritma LGBM Regressor adalah singkatan dari "Light Gradient Boosting Machine Regressor." Ini adalah salah satu algoritma dalam pembelajaran mesin yang digunakan untuk tugas regresi, yaitu memprediksi nilai numerik berdasarkan data input yang ada. LGBM Regressor adalah implementasi dari pustaka LightGBM, yang merupakan model boosting berbasis pohon yang sangat efisien dan efektif. 
+3.	Feature importance adalah ukuran seberapa penting suatu fitur dalam memprediksi target. Fitur "corridorName" memiliki feature importance tertinggi, yaitu 100% Hal ini berarti bahwa fitur "corridorName" adalah fitur yang paling penting dalam memprediksi payAmount.
+4.	Beberapa enhancements telah diterapkan pada model, termasuk 1st hyperparameter optimization (HPO-1) dan 2nd hyperparameter optimization, yang disertai dengan Feature engineering. Enhancements ini bertujuan untuk meningkatkan kinerja model.
+Dengan demikian, hasil Project Capstone ini memberikan wawasan yang berharga dalam pengembangan Prediksi Jumlah Pembayaran Penumpang Transjakarta Menggunakan Model Regresi pada Data Transaksi Transportasi Publik, yang dapat digunakan untuk perencanaan dan pengelolaan layanan transportasi yang lebih efisien dan akurat di masa depan. 
+
+
+
+
 
