@@ -192,13 +192,15 @@ Dengan atribut-atribut berikut:
 
 
 
-21.	Selanjutnya Create a new deployment space, masukkan nama, dan kaitkan dengan machine learning service kemudian pilih Create
+21.	Kemudian pilih Promote to deployment space
+ ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/721c54e9-465c-493e-b263-f478517ff482)
+
+
+22.	Lalu saya memilih target space payAmount
  
-![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/e134ca22-8e85-4bf8-8b48-ac98f1ca865e)
 
-22.	Download CSV templetenya terlebih dahulu.
- ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/8ec2a58e-ecb6-4272-bd38-8ad7e7212d6a)
 
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/c6803ff3-9dcb-4f84-8835-0d842673a94b)
 
 
 
@@ -206,16 +208,58 @@ Dengan atribut-atribut berikut:
 
 
 
+23.	Selanjutnya Create a new deployment space, masukkan nama, dan kaitkan dengan machine learning service kemudian pilih Create
+ ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/320a26f2-7ef4-4848-a1df-73121ce40c10)
 
 
-23.	Setelah memasukan data pada CSV templete yang sudah di download, maka upload kembali, lalu pilih predict.
- ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/a6f484eb-137b-4f73-9681-af5ac44de305)
+24.	Memilih bagian Assets, lalau klik titik tiga sebelah kanan pada model dan pilih Deploy
+ 
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/8436bba2-fd71-406e-804e-f24e5463e61a)
 
 
-24.	Maka hasil predict akan terlihat. Hasil nilai prediksi untuk baris pertama adalah 3697.2, sedangkan nilai sebenarnya adalah 3500. Selisih antara nilai prediksi dan nilai sebenarnya adalah 197.2. Selisih ini cukup kecil, sehingga menunjukkan bahwa model regresi memiliki akurasi yang cukup baik.
-![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/1f8cabdd-fad0-4432-bfb8-bf70b890a6e7)
+
+
+
+
+
+25.	Lalu pada bagian Create a deployment pilih Online untuk tipe deployment, saya memasukkan nama payAmount Deployment kemudian Create , Go to space settings.
+    ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/df06eb53-c65d-4934-b9ff-a0e8e5cfa8f1)
+
+
+26.	Pada bagian assets saya memilih deploy kembali
+     
+
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/ca4f5318-eef6-4e6f-8b63-64f09bd2350a)
+
+
+
+
+27.	Saya memilih payAmount Deployment pada bagian notifikasi
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/01356fbc-4857-42cf-a020-221e2b7f2df6)
 
  
+     
+28.	Kemudian memilih bagian Test untuk melakukan testing data tersebut dan mendownload CSV templetenya terlebih dahulu.
+
+ 
+
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/0ba4474c-60e2-4d3f-8c48-f4ea54641e73)
+
+
+
+
+
+
+
+
+29.	Setelah memasukan data pada CSV templete yang sudah di download, maka upload kembali, lalu pilih predict.
+ 
+![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/d256035d-206c-40d7-9914-e6f18a5451ae)
+
+30.	Maka hasil predict akan terlihat. Hasil nilai prediksi untuk baris pertama adalah 3697.2, sedangkan nilai sebenarnya adalah 3500. Selisih antara nilai prediksi dan nilai sebenarnya adalah 197.2. Selisih ini cukup kecil, sehingga menunjukkan bahwa model regresi memiliki akurasi yang cukup baik.
+
+ ![image](https://github.com/Azizahfatmas/Project_Capstone_HCAI/assets/92080188/284b22a2-345c-4093-a21c-f7ceae76c9aa)
+
 
 
 
@@ -225,6 +269,7 @@ Berdasarkan hasil prediksi Prediksi Jumlah Pembayaran Penumpang Transjakarta Men
 2.	Algoritma LGBM Regressor adalah singkatan dari "Light Gradient Boosting Machine Regressor." Ini adalah salah satu algoritma dalam pembelajaran mesin yang digunakan untuk tugas regresi, yaitu memprediksi nilai numerik berdasarkan data input yang ada. LGBM Regressor adalah implementasi dari pustaka LightGBM, yang merupakan model boosting berbasis pohon yang sangat efisien dan efektif. 
 3.	Feature importance adalah ukuran seberapa penting suatu fitur dalam memprediksi target. Fitur "corridorName" memiliki feature importance tertinggi, yaitu 100% Hal ini berarti bahwa fitur "corridorName" adalah fitur yang paling penting dalam memprediksi payAmount.
 4.	Beberapa enhancements telah diterapkan pada model, termasuk 1st hyperparameter optimization (HPO-1) dan 2nd hyperparameter optimization, yang disertai dengan Feature engineering. Enhancements ini bertujuan untuk meningkatkan kinerja model.
+
 Dengan demikian, hasil Project Capstone ini memberikan wawasan yang berharga dalam pengembangan Prediksi Jumlah Pembayaran Penumpang Transjakarta Menggunakan Model Regresi pada Data Transaksi Transportasi Publik, yang dapat digunakan untuk perencanaan dan pengelolaan layanan transportasi yang lebih efisien dan akurat di masa depan. 
 
 
