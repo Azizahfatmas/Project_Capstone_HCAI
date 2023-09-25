@@ -1,0 +1,61 @@
+{
+  "doc_type": "pipeline",
+  "pipelines": [{
+    "id": "62e32771-9cda-45d9-a338-3214b9e9227b",
+    "nodes": [{
+      "id": "automl",
+      "op": "wml-http-score",
+      "outputs": [{
+        "id": "automl"
+      }],
+      "parameters": {
+        "output_logs": true,
+        "input_file_separator": ",",
+        "stage_flag": true,
+        "optimization": {
+          "daub_include_only_estimators": ["RandomForestRegressorEstimator", "DecisionTreeRegressorEstimator", "RidgeEstimator", "ExtraTreesRegressorEstimator", "LinearRegressionEstimator", "XGBRegressorEstimator", "LGBMRegressorEstimator", "SnapDecisionTreeRegressorEstimator", "SnapRandomForestRegressorEstimator", "SnapBoostingMachineRegressorEstimator", "GradientBoostingRegressorEstimator"],
+          "learning_type": "regression",
+          "label": "payAmount",
+          "global_stage_include_batched_ensemble_estimators": [],
+          "max_num_daub_ensembles": 3,
+          "scorer_for_ranking": "neg_root_mean_squared_error",
+          "compute_pipeline_notebooks_flag": true,
+          "run_cognito_flag": true,
+          "daub_adaptive_subsampling_max_mem_usage": 15000000000,
+          "holdout_param": 0.1,
+          "cv_num_folds": 3
+        },
+        "wml_status": {
+          "url": "https://us-south.ml.cloud.ibm.com/v4_private/trainings"
+        },
+        "storage": {
+          "exchange": "training-prod",
+          "url": "amqps://ibm_cloud_f3fc99ba_0ae1_470e_b181_d65f4b550575:93bb103eb0b68a08f4597438fa45598c280a36cf558aa2e5b9c59ce9286ce869@e05d2e94-e200-453b-b514-d234c0202b12.blijti4d0v0nkr55oei0.private.databases.appdomain.cloud:31573"
+        },
+        "n_parallel_data_connections": 4,
+        "one_vs_all_file": true
+      },
+      "runtime_ref": "autoai",
+      "type": "execution_node"
+    }],
+    "runtime_ref": "hybrid"
+  }],
+  "primary_pipeline": "62e32771-9cda-45d9-a338-3214b9e9227b",
+  "runtimes": [{
+    "app_data": {
+      "wml_data": {
+        "hardware_spec": {
+          "id": "a6c4923b-b8e4-444c-9f43-8a7ec3020110",
+          "name": "L"
+        },
+        "software_spec": {
+          "name": "autoai-kb_rt22.2-py3.10"
+        }
+      }
+    },
+    "id": "autoai",
+    "name": "auto_ai.kb",
+    "version": "3.1.207"
+  }],
+  "version": "2.0"
+}
